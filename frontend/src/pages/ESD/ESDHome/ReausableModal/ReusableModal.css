@@ -1,0 +1,305 @@
+.modal-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  position: relative;
+}
+
+.title-content {
+  display: flex;
+  align-items: center;
+  width: 128px;
+}
+
+.icon-action {
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.ellipsis-modal .ant-table {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.ant-modal-content {
+  width: 80% !important;
+}
+
+.modal-footer {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-top: 32px !important;
+}
+
+.modal-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1890ff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.modal-button:hover {
+  background-color: #40a9ff;
+}
+
+.modal-button:last-child {
+  background-color: #f5222d;
+}
+
+.modal-button:last-child:hover {
+  background-color: #ff4d4f;
+}
+
+.failure-lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+}
+
+.failure-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 220px;
+}
+
+.failure-column-header {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #595959;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d9d9d9;
+  margin-bottom: 12px;
+}
+
+.failure-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.failure-column li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.failure-column li:last-child {
+  border-bottom: none;
+}
+
+.failure-column input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.failure-column input[type="text"] {
+  width: 70%;
+  padding: 6px 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.custom-modal .ant-modal-content {
+  width: 299px !important;
+  height: 161px !important;
+  padding: 24px 38px;
+  border-radius: 2px 0px 0px 0px;
+  top: 162px;
+  right: -111px;
+  opacity: 1;
+}
+
+.button-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.custom-button {
+  text-transform: none !important;
+  height: 25px;
+  width: 46%;
+  border-radius: 0 !important;
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon-delete {
+  margin-right: 108px !important;
+  padding-bottom: 13px;
+  color: #F59E0B;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.custom-font-delete {
+  font-family: 'Selawik', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.custom-font-edit {
+  height: 26px;
+  border-radius: 0;
+  background-color: #389e0d !important;
+  width: 100px;
+}
+
+.modal-button-monitor-save {
+  background-color: #009B2D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  width: 93px;
+}
+
+.modal-button-monitor-cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-style: solid;
+  border-color: #009B2D;
+  color: black;
+  height: 22px;
+  width: 93px;
+  border-radius: 0;
+}
+
+.modal-button-monitor-cancel:hover {
+  background-color: white;
+  color: black;
+  border-color: #009B2D;
+}
+
+.dut-reausable-modal {
+  color: #009B2D !important;
+  margin-right: 5px;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-modal-confirm .ant-modal-confirm-btns .ant-btn+.ant-btn {
+  background-color: #389e0d !important;
+}
+
+.custom-cancel-button {
+  height: 26px;
+  border-radius: 0;
+  width: 100px;
+}
+
+.modal-form {
+  margin-bottom: 16px;
+}
+
+.modal-form .ant-input-suffix {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.modal-edit-button,
+.modal-close-button {
+  width: 105px;
+  height: 22px;
+  margin-right: 20px;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+
+.textfield-as-label {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  font-size: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.textfield-as-label .MuiInputBase-input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.css-cij06z-MuiTypography-root {
+  margin-left: 33px !important;
+}
+
+/* Alterações para garantir que as tabelas fiquem alinhadas */
+.modal-table-container {
+  max-height: calc(190vh - 100px); /* Ajuste conforme necessário */
+  max-width: 100%; /* Garantir que o conteúdo ocupe todo o espaço disponível */
+  overflow-y: auto; /* Habilita rolagem vertical */
+  overflow-x: auto;
+}
+
+.flex-gap {
+  gap: 12px;
+  width: 100%; /* Ajuste para ocupar todo o espaço disponível */
+}
+
+.monitor-table-container {
+  flex: 1; /* As duas tabelas devem ocupar o mesmo espaço */
+  max-height: 400px; /* Limita a altura da tabela */
+  overflow: auto; /* Permite rolagem se necessário */
+}
+
+
+.custom-log-modal .ant-modal-content {
+  position: relative;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+              0 3px 6px -4px rgba(0, 0, 0, 0.12),
+              0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+  padding: 20px 24px;
+  align-content: center;
+  right: -19px;
+  left: 135px;
+}

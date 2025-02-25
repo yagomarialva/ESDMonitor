@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Biometric.Backend</name>
+    </assembly>
+    <members>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.InsertBiometric(BiometricFaceApi.Models.BiometricModel)">
+            <summary>
+            Cadastro e Atualização de dados do operador
+            </summary>
+            <remarks>Cadastra o operador na base de dados; Para atualizar dados basta usar a matricula do operador.</remarks>
+            <param name="biometric">Dados de cadastro do operador</param>
+            <returns></returns>
+            <reponse code="200">Dados atualizado com sucesso</reponse>
+            <reponse code="201">Operador criado com sucesso</reponse>
+            <reponse code="404">Dados incorretos ou inválidos</reponse>
+            <reponse code="500">Internal server error</reponse>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetUserById(System.Int32)">
+            <summary>
+            Buscar operador
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetAllUsers">
+            <summary>
+            Buscar todos operadores
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.DeleteBiometic(System.Int32)">
+            <summary>
+            Deletar operador
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BiometricFaceApi.Migrations.firstmigration">
+            <inheritdoc />
+        </member>
+        <member name="M:BiometricFaceApi.Migrations.firstmigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BiometricFaceApi.Migrations.firstmigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BiometricFaceApi.Migrations.firstmigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BiometricFaceApi.Migrations.authmiration">
+            <inheritdoc />
+        </member>
+        <member name="M:BiometricFaceApi.Migrations.authmiration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BiometricFaceApi.Migrations.authmiration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BiometricFaceApi.Migrations.authmiration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Data",
+    "\\obj",
+    "\\obj\\Debug\\net8.0",
+    "\\Repositories",
+    "\\Repositories\\Interfaces"
+  ],
+  "SelectedNode": "\\Repositories\\Interfaces\\IUsersRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

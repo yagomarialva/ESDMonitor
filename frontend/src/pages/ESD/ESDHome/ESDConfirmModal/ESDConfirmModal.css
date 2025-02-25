@@ -1,0 +1,110 @@
+.custom-modal .ant-modal-content {
+  width: 330px;
+  height: 263px;
+  padding: 24px 38px;
+  border-radius: 2px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+
+.button-container {
+  margin-top: 24px; /* mt: 3 (em px, 3 * 8 = 24px) */
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px; /* gap: 12 (em px, 12 * 8 = 96px) */
+}
+
+.custom-button {
+  text-transform: none !important; /* Remove a exibição em letras maiúsculas */
+  height: 25px;
+  width: 46%;
+  border-radius: 0 !important;
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon-delete {
+  margin-right: 8px;
+  width: 35.5px !important;
+  color: #F59E0B;
+}
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.custom-font-delete {
+  font-family: 'Selawik', sans-serif !important; /* Define a família da fonte */
+  font-size: 13px !important; /* Define o tamanho da fonte */
+  font-weight: 600 !important; /* Define o peso da fonte */
+  color: white !important; /* Define a cor da fonte */
+}
+
+.custom-font-edit {
+  font-family: 'Selawik', sans-serif !important; /* Define a família da fonte */
+  font-size: 13px !important; /* Define o tamanho da fonte */
+  font-weight: 600 !important; /* Define o peso da fonte */
+}
+
+.custom-cancel-button {
+  border: 2px solid green !important; /* Borda verde */
+  color: green !important;            /* Texto verde */
+  background-color: transparent !important; /* Fundo transparente */
+  font-weight: 600 !important;        /* Texto em negrito */
+  font-family: 'Selawik', sans-serif !important; /* Mantendo a fonte customizada */
+  font-size: 13px !important;         /* Tamanho da fonte */
+}
+
+
+.modal-form {
+  margin-bottom: 16px;
+}
+
+.modal-form .ant-input-suffix {
+  color: rgba(0, 0, 0, 0.45); /* Cor do ícone do cadeado */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  gap: 24px; /* Espaçamento entre os botões */
+}
+
+.modal-edit-button,
+.modal-close-button {
+  width: 105px; /* Ajuste conforme necessário */
+  height: 22px; /* Altura conforme especificado */
+}
+
+.textfield-as-label {
+  border: none; /* Remove a borda */
+  background: transparent; /* Remove o fundo */
+  padding: 0; /* Remove o padding */
+  margin: 0; /* Remove a margem */
+  box-shadow: none; /* Remove a sombra */
+  font-size: inherit; /* Faz com que o tamanho da fonte seja o mesmo que o da label */
+  color: inherit; /* Faz com que a cor do texto seja a mesma da label */
+  display: flex; /* Ajusta o layout para que o conteúdo se alinhe corretamente */
+  align-items: center; /* Alinha verticalmente o ícone */
+}
+
+/* Opcional: Remove o sublinhado e outras bordas que podem aparecer */
+.textfield-as-label .MuiInputBase-input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.css-cij06z-MuiTypography-root {
+  margin-left: 33px !important;
+}
+
+

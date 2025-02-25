@@ -1,0 +1,1081 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BiometricFaceApi</name>
+    </assembly>
+    <members>
+        <member name="M:BiometricFaceApi.Controllers.AuthenticationController.Login(BiometricFaceApi.Models.LoginModel)">
+            <summary>
+            Autenticação de usuários cadastrados no banco de dados.
+            </summary>
+            <param name="login">Modelo de login com Username e Password.</param>
+            <response code="200">Retorna dados do usuário autenticado.</response>
+            <response code="401">Usuário não cadastrado.</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.AuthenticationController.InsertAuths(BiometricFaceApi.Models.AuthenticationModel)">
+            <summary>
+            Cadastra e Atualiza dados de usuários.
+            </summary>
+            <param name="authModel">Dados de cadastro do usuário.</param>
+            <response code="200">Dados atualizados com sucesso.</response>
+            <response code="201">Dados cadastrados com sucesso.</response>
+            <response code="400">Dados incorretos ou inválidos.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.AuthenticationController.GetAuthsById(System.Int32)">
+            <summary>
+            Busca usuários pelo ID.
+            </summary>
+            <param name="id">ID do usuário.</param>
+            <response code="200">Retorna dados do usuário.</response>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.AuthenticationController.DeleteAtuhs(System.Int32)">
+            <summary>
+            Deletar usuários pelo ID.
+            </summary>
+            <param name="id">ID do usuário a ser deletado.</param>
+            <response code="200">Usuário removido com sucesso.</response>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetUsersPaginated(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos operadores paginados
+            </summary>
+            <param name="pagina">Número da página (padrão: 1)</param>
+            <param name="tamanhoPagina">Quantidade de itens por página (padrão: 50)</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetAllUsersImage(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos operadores com imagem
+            </summary>
+            <param name="pagina">Número da página (padrão: 1)</param>
+            <param name="tamanhoPagina">Quantidade de itens por página (padrão: 50)</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetAllUsersNoImage(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos operadores sem imagem
+            </summary>
+            <param name="pagina">Número da página (padrão: 1)</param>
+            <param name="tamanhoPagina">Quantidade de itens por página (padrão: 50)</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.VerifyJigAndFace(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            Verificar jig e reconhecimento facial
+            </summary>
+            <param name="serialNumber">Número de serie do jig</param>
+            <param name="imageFile">Imagem do operador</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetUserById(System.Int32)">
+            <summary>
+            Buscar operador por ID
+            </summary>
+            <param name="id">Id do operador no sistema.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.GetByBadge(System.String)">
+            <summary>
+            Buscar operador por crachá
+            </summary>
+            <param name="cracha">Número do crachá</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.InsertBiometric(BiometricFaceApi.Models.BiometricModel)">
+            <summary>
+            Criar ou atualizar operador
+            </summary>
+            <param name="operador">Dados do operador</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.BiometricController.DeleteBiometric(System.Int32)">
+            <summary>
+            Excluir operador por ID
+            </summary>
+            <param name="id">ID do operador</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.JigController.GetAllJigs">
+            <summary>
+            Buscar todos.
+            </summary>
+            <returns>Uma Lista de Jigs.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.JigController.GetJigById(System.Int32)">
+            <summary>
+            Buscar por Jig por ID.
+            </summary>
+            <param name="id">ID Jig.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.JigController.GetJigBySn(System.String)">
+            <summary>
+            Buscar Jig por SN.
+            </summary>
+            <param name="sn">SN do Jig.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.JigController.Include(BiometricFaceApi.Models.JigModel)">
+             <summary>
+            Criar ou atualizar operador Jig.
+             </summary>
+             <param name="model">O modelo Jig a ser adicionado ou atualizado.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.JigController.Delete(System.Int32)">
+            <summary>
+            Excluir Jig por ID.
+            </summary>
+            <param name="id">ID do Jig a ser excluído.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LineController.BuscarTodaLinha">
+            <summary>
+            Busca todas as linhas
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LineController.BuscarLinha(System.Int32)">
+            <summary>
+            Buscar linha por ID
+            </summary>
+            <param name="id">ID da linha</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LineController.BuscarNome(System.String)">
+            <summary>
+            Buscar linha por nome
+            </summary>
+            <param name="name">Nome da linha</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LineController.Include(BiometricFaceApi.Models.LineModel)">
+            <summary>
+            Criar ou atualizar uma linha
+            </summary>
+            <param name="linha">Informações da linha</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LineController.Delete(System.Int32)">
+            <summary>
+            Deletar linha
+            </summary>
+            <param name="id">ID da linha a ser deletada</param>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LinkStationAndLineController.BuscarTodos">
+            <summary>
+            Buscar todos os links
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LinkStationAndLineController.BuscarPorId(System.Int32)">
+            <summary>
+            Buscar link por ID
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LinkStationAndLineController.LinksPorLinha(System.Int32)">
+            <summary>
+            Buscar links por linha ID
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LinkStationAndLineController.LinksPorEstacao(System.Int32)">
+            <summary>
+            Buscar estação
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LinkStationAndLineController.Incluir(BiometricFaceApi.Models.LinkStationAndLineModel)">
+            <summary>
+            Criar ou atualizar link
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LinkStationAndLineController.Deletar(System.Int32)">
+            <summary>
+            Deletar link
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarListaMonitorEsdById(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Busca monitor ESD por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.ListaLogOrdemCrescente(System.Int32,System.Int32)">
+            <summary>
+            Listar em ordem crescente.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.ListaLogOrdemDecrescente(System.Int32,System.Int32)">
+            <summary>
+            Listar em ordem descresente.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarLogMonitorById(System.Int32)">
+            <summary>
+            Busca log monitor ESD por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarMessageType(System.String)">
+            <summary>
+            Busca tipo de log de monitor ESD.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarMessageContent(System.String)">
+            <summary>
+            Busca tipo de conteudo log de monitor ESD.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarMonitorEsdById(System.Int32)">
+            <summary>
+            Busca monitor ESD por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarMonitorEsdByIP(System.String)">
+            <summary>
+            Busca monitor ESD por IP.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.BuscarMonitorEsdBySn(System.String)">
+            <summary>
+            Busca monitor ESD por SN.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.ManagerLogsMonitorEsd(BiometricFaceApi.Models.LogMonitorEsdModel)">
+            <summary>
+            Criar ou atualizar log.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.ChangesLogsMonitorEsd(System.Int32,System.Boolean,System.String)">
+            <summary>
+            Altera dados de log.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.LogMonitorEsdController.Delete(System.Int32)">
+            <summary>
+            Deleta log de monitor ESD pelo ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.MonitorEsdController.BuscarTodos">
+            <summary>
+            Busca todos os monitores ESD.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.MonitorEsdController.BuscarIdMonitor(System.Int32)">
+            <summary>
+            Busca um monitor ESD por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.MonitorEsdController.BuscarMonitorBySerialNumber(System.String)">
+            <summary>
+            Busca monitor ESD por SN.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.MonitorEsdController.ManagerMonitor(BiometricFaceApi.Models.MonitorEsdModel)">
+            <summary>
+            Criar ou atualizar monitor ESD.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.MonitorEsdController.Delete(System.Int32)">
+            <summary>
+            Deleta monitor ESD por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.ProduceActivityController.GetAllProduction">
+            <summary>
+            Retorna todos os registros de produção.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.ProduceActivityController.GetProductionById(System.Int32)">
+            <summary>
+            Busca dados de produção por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.ProduceActivityController.AddOrUpdateProduction(BiometricFaceApi.Models.ProduceActivityModel)">
+            <summary>
+            Criar ou atualizar dados de produção.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.ProduceActivityController.ChangeProductionStatus(System.Int32,System.Boolean,System.String)">
+            <summary>
+            Altera o status de produção.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.ProduceActivityController.DeleteProduction(System.Int32)">
+            <summary>
+            Deleta registro de produção por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RecordStatusController.GetAllStatus">
+            <summary>
+            Busca todos os status.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RecordStatusController.GetStatusById(System.Int32)">
+            <summary>
+            Buscar status de produção por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RecordStatusController.AddOrUpdateStatus(BiometricFaceApi.Models.RecordStatusProduceModel)">
+            <summary>
+            Criar ou atualizar status de produção.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RecordStatusController.DeleteStatus(System.Int32)">
+            <summary>
+            Deleta status de produção.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RolesController.GetAllRoles">
+            <summary>
+            Recupera todas as funções.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RolesController.GetRoleById(System.Int32)">
+            <summary>
+            Recupera função por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RolesController.UpsertRole(BiometricFaceApi.Models.RolesModel)">
+            <summary>
+            Adiciona ou atualiza uma função.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.RolesController.DeleteRole(System.Int32)">
+            <summary>
+            Exclui função por ID.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationController.GetAllStations">
+            <summary>
+            Buscar todos
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationController.GetStationById(System.Int32)">
+            <summary>
+            Buscar id 
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationController.GetStationByName(System.String)">
+            <summary>
+            Buscar nome 
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationController.AddOrUpdateStation(BiometricFaceApi.Models.StationModel)">
+            <summary>
+            Criar ou atualizar Estação.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationController.DeleteStation(System.Int32)">
+            <summary>
+            Deletar Estação
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationViewController.BuscarTodos">
+            <summary>
+            Buscar todos as Estações View.
+            </summary>
+            <response code="200">Retorna todos.</response>
+            <response code="404">Nenhuma estação encontrada.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationViewController.BuscarIdEstacaoView(System.Int32)">
+            <summary>
+            Buscar Estacao View por Id.
+            </summary>
+            <param name="id">Id da Estação View.</param>
+            <response code="200">Retorna Estação View por Id.</response>
+            <response code="404">Estação View não encontrada.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationViewController.Include(BiometricFaceApi.Models.StationViewModel)">
+            <summary>
+            Cadastra ou Atualiza dados do Estação View.
+            </summary>
+            <param name="model">Dados de cadastro da Estação View.</param>
+            <response code="200">Dados atualizados com sucesso.</response>
+            <response code="201">Dados cadastrados com sucesso.</response>
+            <response code="400">Dados incorretos ou inválidos.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationViewController.FactoryMap">
+            <summary>
+            Gera um mapa de fábricas.
+            </summary>
+            <response code="200">Mapa gerado com sucesso.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="M:BiometricFaceApi.Controllers.StationViewController.Delete(System.Int32)">
+            <summary>
+            Deletar Estação View.
+            </summary>
+            <param name="id">Id da Estação View a ser deletada.</param>
+            <response code="200">Dados removidos do banco de dados.</response>
+            <response code="404">Estação View não encontrada.</response>
+            <response code="500">Erro do servidor interno!</response>
+        </member>
+        <member name="F:BiometricFaceApi.OraScripts.SQLScripts.VerifyTables">
+            <summary>
+            Comando SQL USERS
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.FcEmbeddingQueries">
+            <summary>
+            Comando SQL FCEMBEDDING
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.FcAreaQueries">
+            <summary>
+            Comando SQL FCAREA
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.FcEyeQueries">
+            <summary>
+            Comando SQL FCEYE
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.UserQueries">
+            <summary>
+            Comando SQL USERS
+            </summary> 
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.ImageQueries">
+            <summary>
+            COMANDOS SQL IMAGES
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.LineQueries">
+            <summary>
+            Comandos SQL para a tabela Line
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.StationQueries">
+            <summary>
+            Comandos SQL para a tabela Station
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.JigQueries">
+            <summary>
+            Comandos SQL para a tabela Jig
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.MonitoresdQueries">
+            <summary>
+            Comandos SQL para a tabela MonitoresEsd
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.LinkStationAndLineQueries">
+            <summary>
+            Comandos SQL para a tabela linkStationAndLine
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.ProduceActivityQueries">
+            <summary>
+            Comandos SQL para a tabela produceactivity
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.RecordStatusProduceQueries">
+            <summary>
+            Comandos SQL para a tabela recordStatusProduce
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.RolesQueries">
+            <summary>
+            Comandos SQL para a tabela roles
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.AuthenticationQueries">
+            <summary>
+            Comandos SQL para a tabela authentication
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.StationViewQueries">
+            <summary>
+            Comandos SQL para a tabela stationview
+            </summary>   
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.LogMonitorEsdQueries">
+            <summary>
+            Comandos SQL para a tabela logmonitorEsd
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.LastLogMonitorEsdQueries">
+            <summary>
+            Comandos SQL para a tabela lastlogmonitorEsd
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.OraScripts.SQLScripts.StatusJigAndUserQueries">
+            <summary>
+            Comandos SQL para a tabela statusjigandusers
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.AuthenticateUserAsync(System.String,System.String)">
+            <summary>
+            Authenticates a user by login and password.
+            </summary>
+            <param name="login">The login of the user.</param>
+            <param name="password">The password of the user.</param>
+            <returns>An AuthenticationModel if authentication is successful, null otherwise.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.AddAsync(BiometricFaceApi.Models.AuthenticationModel)">
+            <summary>
+            Adds a new authentication entry.
+            </summary>
+            <param name="userAuth">The AuthenticationModel containing the user's credentials.</param>
+            <returns>The created AuthenticationModel.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.UpdateAsync(BiometricFaceApi.Models.AuthenticationModel,System.Int32)">
+            <summary>
+            Updates an existing authentication entry.
+            </summary>
+            <param name="userAuth">The updated AuthenticationModel.</param>
+            <param name="id">The ID of the authentication entry to update.</param>
+            <returns>The updated AuthenticationModel.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Retrieves an authentication entry by its ID.
+            </summary>
+            <param name="id">The ID of the authentication entry.</param>
+            <returns>An AuthenticationModel if found, null otherwise.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.GetByUsernameAsync(System.String)">
+            <summary>
+            Retrieves an authentication entry by username.
+            </summary>
+            <param name="username">The username of the user.</param>
+            <returns>An AuthenticationModel if found, null otherwise.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.GetByBadgeAsync(System.String)">
+            <summary>
+            Retrieves an authentication entry by badge ID.
+            </summary>
+            <param name="badgeId">The badge ID of the user.</param>
+            <returns>An AuthenticationModel if found, null otherwise.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IAuthenticationRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Deletes an authentication entry by its ID.
+            </summary>
+            <param name="id">The ID of the authentication entry to delete.</param>
+            <returns>The deleted AuthenticationModel if found, null otherwise.</returns>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.IImageRepository">
+            <summary>
+            Interface for image repository operations.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IImageRepository.GetAllImagesAsync">
+            <summary>
+            Retrieves all images asynchronously.
+            </summary>
+            <returns>A task representing the asynchronous operation, with a list of images.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IImageRepository.GetImageByIdAsync(System.Int32)">
+            <summary>
+            Retrieves an image by its unique identifier asynchronously.
+            </summary>
+            <param name="imageId">The unique identifier of the image.</param>
+            <returns>A task representing the asynchronous operation, with the image model.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IImageRepository.GetImageByUserIdAsync(System.Int32)">
+            <summary>
+            Retrieves an image by the associated user's unique identifier asynchronously.
+            </summary>
+            <param name="userId">The unique identifier of the user.</param>
+            <returns>A task representing the asynchronous operation, with the image model.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IImageRepository.AddImageAsync(BiometricFaceApi.Models.ImageModel)">
+            <summary>
+            Adds a new image asynchronously.
+            </summary>
+            <param name="image">The image model to add.</param>
+            <returns>A task representing the asynchronous operation, with the added image model.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IImageRepository.UpdateImageAsync(BiometricFaceApi.Models.ImageModel)">
+            <summary>
+            Updates an existing image asynchronously.
+            </summary>
+            <param name="image">The image model with updated information.</param>
+            <returns>A task representing the asynchronous operation, with the updated image model, or null if not found.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IImageRepository.DeleteImageAsync(System.Int32)">
+            <summary>
+            Deletes an image by its unique identifier asynchronously.
+            </summary>
+            <param name="imageId">The unique identifier of the image to delete.</param>
+            <returns>A task representing the asynchronous operation, indicating whether the deletion was successful.</returns>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.IJigRepository">
+            <summary>
+            Interface responsável por definir as operações CRUD para o modelo Jig.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IJigRepository.GetAllAsync">
+            <summary>
+            Busca todas as entradas de Jig no banco de dados.
+            </summary>
+            <returns>Uma lista de objetos JigModel.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IJigRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Busca um Jig específico pelo seu ID.
+            </summary>
+            <param name="jigId">ID do Jig.</param>
+            <returns>O JigModel correspondente ao ID, ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IJigRepository.GetByNameAsync(System.String)">
+            <summary>
+            Busca um Jig específico pelo seu nome.
+            </summary>
+            <param name="jigName">Nome do Jig.</param>
+            <returns>O JigModel correspondente ao nome, ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IJigRepository.AddOrUpdateAsync(BiometricFaceApi.Models.JigModel)">
+            <summary>
+            Adiciona ou atualiza um Jig no banco de dados.
+            </summary>
+            <param name="jig">Objeto JigModel contendo os dados do Jig.</param>
+            <returns>O objeto JigModel atualizado ou inserido.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IJigRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Remove um Jig do banco de dados pelo seu ID.
+            </summary>
+            <param name="id">ID do Jig a ser removido.</param>
+            <returns>True se a exclusão for bem-sucedida, false caso contrário.</returns>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.ILineRepository">
+            <summary>
+            Interface responsável por definir as operações CRUD para o modelo Line.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILineRepository.GetAllAsync">
+            <summary>
+            Obtém todas as linhas.
+            </summary>
+            <returns>Uma lista de objetos LineModel.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILineRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Obtém uma linha específica pelo seu ID.
+            </summary>
+            <param name="id">ID da linha.</param>
+            <returns>O objeto LineModel correspondente ao ID, ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILineRepository.GetByNameAsync(System.String)">
+            <summary>
+            Obtém uma linha específica pelo seu nome.
+            </summary>
+            <param name="lineName">Nome da linha.</param>
+            <returns>O objeto LineModel correspondente ao nome, ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILineRepository.AddOrUpdateAsync(BiometricFaceApi.Models.LineModel)">
+            <summary>
+            Adiciona uma nova linha ao banco de dados.
+            </summary>
+            <param name="lineModel">O objeto LineModel a ser inserido.</param>
+            <returns>O objeto LineModel inserido, ou null se a inserção falhar.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILineRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Remove uma linha do banco de dados pelo seu ID.
+            </summary>
+            <param name="id">ID da linha a ser removida.</param>
+            <returns>O objeto LineModel removido, ou null se a exclusão falhar.</returns>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository">
+            <summary>
+            Interface para o repositório de links entre estações e linhas.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.GetAllLinksAsync">
+            <summary>
+            Obtém todos os links de estações e linhas.
+            </summary>
+            <returns>Uma lista de modelos de links de estações e linhas.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.GetByLinkIdAsync(System.Int32)">
+            <summary>
+            Obtém um link específico pelo ID.
+            </summary>
+            <param name="id">O ID do link a ser buscado.</param>
+            <returns>O modelo do link correspondente ou null se não encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.GetByLineIdAsync(System.Int32)">
+            <summary>
+            Obtém todos os links associados a uma linha específica.
+            </summary>
+            <param name="lineId">O ID da linha cujos links devem ser buscados.</param>
+            <returns>Uma lista de modelos de links associados à linha ou null se não encontrados.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.GetByStationIdAsync(System.Int32)">
+            <summary>
+            Obtém todos os links associados a uma estação específica.
+            </summary>
+            <param name="stationId">O ID da estação cujos links devem ser buscados.</param>
+            <returns>Uma lista de modelos de links associados à estação ou null se não encontrados.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.GetByLineIdAndStationIdAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém um link específico com base nos IDs da linha e da estação.
+            </summary>
+            <param name="lineId">O ID da linha.</param>
+            <param name="stationId">O ID da estação.</param>
+            <returns>O modelo do link correspondente ou null se não encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.IncludeAsync(BiometricFaceApi.Models.LinkStationAndLineModel)">
+            <summary>
+            Inclui um novo link de estação e linha no repositório.
+            </summary>
+            <param name="model">O modelo do link a ser incluído.</param>
+            <returns>O modelo do link incluído.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.ILinkStationAndLineRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Deleta um link específico pelo ID.
+            </summary>
+            <param name="id">O ID do link a ser deletado.</param>
+            <returns>O modelo do link deletado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetAllMonitorsAsync">
+            <summary>
+            Retrieve all MonitorEsd records.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetMonitorByIdAsync(System.Int32)">
+            <summary>
+            Retrieve a MonitorEsd record by its ID.
+            </summary>
+            <param name="id">The monitor ID.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetMonitorBySerialAsync(System.String)">
+            <summary>
+            Retrieve a MonitorEsd record by its serial number.
+            </summary>
+            <param name="serial">The monitor serial number.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetLogsAsync(System.String)">
+            <summary>
+            Retrieve a MonitorEsd record by its logs.
+            </summary>
+            <param name="logs">The monitor serial number.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetByOperatorStatusAsync(System.String)">
+            <summary>
+            Retrieve a MonitorEsd record by operator status.
+            </summary>
+            <param name="statusOperator">The operator status.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetByJigStatusAsync(System.String)">
+            <summary>
+            Retrieve a MonitorEsd record by jig status.
+            </summary>
+            <param name="statusJig">The jig status.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.GetByStatusAsync(System.String)">
+            <summary>
+            Retrieve a MonitorEsd record by its overall status.
+            </summary>
+            <param name="status">The monitor status.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.AddOrUpdateAsync(BiometricFaceApi.Models.MonitorEsdModel)">
+            <summary>
+            Add or update a MonitorEsd record.
+            </summary>
+            <param name="monitorModel">The monitor model.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IMonitorEsdRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Delete a MonitorEsd record by its ID.
+            </summary>
+            <param name="id">The monitor ID.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.GetAllAsync">
+            <summary>
+            Obtém todas as atividades de produção.
+            </summary>
+            <returns>Lista de todas as atividades de produção.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Obtém uma atividade de produção por ID.
+            </summary>
+            <param name="id">ID da atividade de produção.</param>
+            <returns>Modelo da atividade de produção ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.GetByUserIdAsync(System.Int32)">
+            <summary>
+            Obtém uma atividade de produção por ID do usuário.
+            </summary>
+            <param name="userId">ID do usuário.</param>
+            <returns>Modelo da atividade de produção ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.GetByJigIdAsync(System.Int32)">
+            <summary>
+            Obtém uma atividade de produção por ID do jig.
+            </summary>
+            <param name="jigId">ID do jig.</param>
+            <returns>Modelo da atividade de produção ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.GetByMonitorIdAsync(System.Int32)">
+            <summary>
+            Obtém uma atividade de produção por ID do monitor.
+            </summary>
+            <param name="monitorId">ID do monitor.</param>
+            <returns>Modelo da atividade de produção ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.GetByLinkStationAndLineIdAsync(System.Int32)">
+            <summary>
+            Obtém uma atividade de produção por ID de vínculo de estação e linha.
+            </summary>
+            <param name="linkStationAndLineId">ID do vínculo de estação e linha.</param>
+            <returns>Modelo da atividade de produção ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.IsLockedAsync(System.Int32,System.Int32)">
+            <summary>
+            Verifica se uma atividade de produção está bloqueada.
+            </summary>
+            <param name="id">ID da atividade de produção.</param>
+            <param name="isLocked">Indica se está bloqueada.</param>
+            <returns>Modelo da atividade de produção ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.AddOrUpdateAsync(BiometricFaceApi.Models.ProduceActivityModel)">
+            <summary>
+            Adiciona uma nova atividade de produção.
+            </summary>
+            <param name="produceActivity">Dados da nova atividade de produção.</param>
+            <returns>Modelo da atividade de produção adicionada ou null em caso de falha.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IProduceActivityRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Exclui uma atividade de produção por ID.
+            </summary>
+            <param name="id">ID da atividade de produção a ser excluída.</param>
+            <returns>Modelo da atividade de produção excluída ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRecordStatusRepository.GetAllAsync">
+            <summary>
+            Obtém todos os registros de status de produção.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRecordStatusRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Obtém um registro de status de produção pelo seu ID.
+            </summary>
+            <param name="id">ID do registro de status.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRecordStatusRepository.GetByProduceActivityIdAsync(System.Int32)">
+            <summary>
+            Obtém um registro de status de produção pelo ID da atividade de produção.
+            </summary>
+            <param name="produceActivityId">ID da atividade de produção.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRecordStatusRepository.GetByUserIdAsync(System.Int32)">
+            <summary>
+            Obtém um registro de status de produção pelo ID do usuário.
+            </summary>
+            <param name="userId">ID do usuário.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRecordStatusRepository.AddOrUpdateAsync(BiometricFaceApi.Models.RecordStatusProduceModel)">
+            <summary>
+            Insere ou atualiza um registro de status de produção.
+            </summary>
+            <param name="model">Modelo do registro de status de produção.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRecordStatusRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Deleta um registro de status de produção pelo seu ID.
+            </summary>
+            <param name="id">ID do registro a ser deletado.</param>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.IRolesRepository">
+            <summary>
+            Interface para o repositório de funções de usuário.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRolesRepository.GetAllRolesAsync">
+            <summary>
+            Obtém todas as funções.
+            </summary>
+            <returns>Uma lista de objetos <see cref="T:BiometricFaceApi.Models.RolesModel"/>.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRolesRepository.GetRoleByIdAsync(System.Int32)">
+            <summary>
+            Obtém uma função pelo ID.
+            </summary>
+            <param name="id">O ID da função.</param>
+            <returns>Um objeto <see cref="T:BiometricFaceApi.Models.RolesModel"/> se encontrado; caso contrário, <c>null</c>.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRolesRepository.GetRoleByNameAsync(System.String)">
+            <summary>
+            Obtém uma função pelo nome.
+            </summary>
+            <param name="roleName">O nome da função.</param>
+            <returns>Um objeto <see cref="T:BiometricFaceApi.Models.RolesModel"/> se encontrado; caso contrário, <c>null</c>.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRolesRepository.AddOrUpdateRoleAsync(BiometricFaceApi.Models.RolesModel)">
+            <summary>
+            Adiciona uma nova função.
+            </summary>
+            <param name="roleModel">O objeto <see cref="T:BiometricFaceApi.Models.RolesModel"/> a ser adicionado.</param>
+            <returns>O objeto <see cref="T:BiometricFaceApi.Models.RolesModel"/> adicionado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IRolesRepository.DeleteRoleAsync(System.Int32)">
+            <summary>
+            Remove uma função pelo ID.
+            </summary>
+            <param name="id">O ID da função a ser removida.</param>
+            <returns>O objeto <see cref="T:BiometricFaceApi.Models.RolesModel"/> removido, se encontrado; caso contrário, <c>null</c>.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationRepository.GetAllAsync">
+            <summary>
+            Retrieves all stations.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a station by its unique identifier.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationRepository.GetByNameAsync(System.String)">
+            <summary>
+            Retrieves a station by its name.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationRepository.AddOrUpdateAsync(BiometricFaceApi.Models.StationModel)">
+            <summary>
+            Adds a new station.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Deletes a station by its unique identifier.
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.IStationViewRepository">
+            <summary>
+            Interface para operações relacionadas à entidade StationView.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationViewRepository.GetAllStationViewsAsync">
+            <summary>
+            Obtém todas as StationViews disponíveis.
+            </summary>
+            <returns>Uma lista de StationViewModel.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationViewRepository.GetStationViewByIdAsync(System.Int32)">
+            <summary>
+            Obtém uma StationView específica pelo seu ID.
+            </summary>
+            <param name="id">O ID da StationView.</param>
+            <returns>O modelo StationViewModel correspondente ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationViewRepository.GetByPositionSequenceIdAsync(System.Int32)">
+            <summary>
+            Obtém uma StationView específica pela posição sequencial.
+            </summary>
+            <param name="id">O ID da sequência de posição.</param>
+            <returns>O modelo StationViewModel correspondente ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationViewRepository.AddOrUpdateAsync(BiometricFaceApi.Models.StationViewModel)">
+            <summary>
+            Inclui uma nova StationView.
+            </summary>
+            <param name="stationViewModel">O modelo StationViewModel a ser incluído.</param>
+            <returns>O modelo StationViewModel inserido.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IStationViewRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Remove uma StationView pelo seu ID.
+            </summary>
+            <param name="id">O ID da StationView a ser removida.</param>
+            <returns>O modelo StationViewModel removido.</returns>
+        </member>
+        <member name="T:BiometricFaceApi.Repositories.Interfaces.IUsersRepository">
+            <summary>
+            Interface for User repository operations.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.GetAllAsync">
+            <summary>
+            Retrieves all users asynchronously.
+            </summary>
+            <returns>A task representing the asynchronous operation, with a list of users.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.GetListUsersAsync(System.Int32,System.Int32)">
+            <summary>
+            Retrieves all users asynchronously.
+            </summary>
+            <returns>A task representing the asynchronous operation, with a list of users.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a user by their unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the user.</param>
+            <returns>A task representing the asynchronous operation, with the user model if found; otherwise, null.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.GetByBadgeAsync(System.String)">
+            <summary>
+            Retrieves a user by their badge number asynchronously.
+            </summary>
+            <param name="badge">The badge number of the user.</param>
+            <returns>A task representing the asynchronous operation, with the user model if found; otherwise, null.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.GetByNameAsync(System.String)">
+            <summary>
+            Retrieves a user by their name asynchronously.
+            </summary>
+            <param name="name">The name of the user.</param>
+            <returns>A task representing the asynchronous operation, with the user model if found; otherwise, null.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.AddAsync(BiometricFaceApi.Models.UserModel)">
+            <summary>
+            Adds a new user asynchronously.
+            </summary>
+            <param name="user">The user model to add.</param>
+            <returns>A task representing the asynchronous operation, with the added user model.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.UpdateAsync(BiometricFaceApi.Models.UserModel,System.Int32)">
+            <summary>
+            Updates an existing user asynchronously.
+            </summary>
+            <param name="user">The user model with updated information.</param>
+            <param name="id">The unique identifier of the user to update.</param>
+            <returns>A task representing the asynchronous operation, with the updated user model.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Repositories.Interfaces.IUsersRepository.DeleteAsync(System.Int32)">
+            <summary>
+            Deletes a user by their unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the user to delete.</param>
+            <returns>A task representing the asynchronous operation, with the deleted user model.</returns>
+        </member>
+        <member name="M:BiometricFaceApi.Services.HubService.SendMessageAsync(System.String)">
+            <summary>
+            Envia uma mensagem para o hub se estiver conectado.
+            </summary>
+            <param name="message">Mensagem a ser enviada.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Services.HubService.StartListeningAsync(System.String)">
+            <summary>
+            Inicia a escuta do websocket e conecta ao hub.
+            </summary>
+            <param name="url">URL do hub.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Services.HubService.StopListeningAsync">
+            <summary>
+            Desconecta do hub e libera os recursos.
+            </summary>
+        </member>
+        <member name="T:BiometricFaceApi.Services.RolesService">
+            <summary>
+            Serviço para gerenciar funções de usuário.
+            </summary>
+        </member>
+        <member name="M:BiometricFaceApi.Services.SocketService.SendMessageAsync(System.String)">
+            <summary>
+            Envia uma mensagem para o servidor socket se estiver conectado.
+            </summary>
+            <param name="message">Mensagem a ser enviada.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Services.SocketService.StartListeningAsync(System.String,System.Int32)">
+            <summary>
+            Inicia a escuta do socket e conecta ao servidor.
+            </summary>
+            <param name="host">Endereço do servidor.</param>
+            <param name="port">Porta do servidor.</param>
+        </member>
+        <member name="M:BiometricFaceApi.Services.SocketService.StopListening">
+            <summary>
+            Desconecta do servidor socket e libera os recursos.
+            </summary>
+        </member>
+    </members>
+</doc>

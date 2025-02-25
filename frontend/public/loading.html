@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        text-align: center;
+      }
+      .progress-bar {
+        width: 300px;
+        height: 30px;
+        background-color: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .progress {
+        height: 100%;
+        width: 0%;
+        background-color: #4caf50;
+        border-radius: 5px;
+        transition: width 0.5s;
+      }
+      .percentage {
+        font-size: 18px;
+        color: #333;
+      }
+      .message {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <span class="message" id="loading-message"></span>
+      <div class="percentage" id="percentage">0%</div>
+    </div>
+
+    <script>
+      const { ipcRenderer } = require("electron");
+      let progress = 0;
+      const progressBar = document.getElementById("progress");
+      const percentageText = document.getElementById("percentage");
+      const messageSpan = document.getElementById("loading-message");
+
+      ipcRenderer.on("onInitialized", (event) => {
+        let messageAction = null;
+
+        function updateProgress() {
+          if (progress < 100) {
+            progress += 1; // Increment progress
+            progressBar.style.width = progress + "%";
+            percentageText.innerText = progress + "%";
+            var loading = 'Carregando';
+            switch (messageSpan.innerText) {
+              case `${loading}...`:
+                messageSpan.innerText = `${loading}`;
+                break;
+              case `${loading}`:
+                messageSpan.innerText = `${loading}.`;
+                break;
+              case `${loading}.`:
+                messageSpan.innerText = `${loading}..`;
+                break;
+              case `${loading}..`:
+                messageSpan.innerText = `${loading}...`;
+                break;
+              default:
+                messageSpan.innerText = `${loading}...`;
+                break;
+            }
+          } else if (progress == 100 && messageAction == null) {
+            messageAcion = setTimeout(() => {
+              percentageText.innerText = "";
+              messageSpan.innerText = "demorando um pouco mais que o normal";
+            }, 3000);
+          } else {
+            clearInterval(interval); // Stop the interval once loading is complete
+          }
+        }
+        ipcRenderer.on("onFinished", (event, progress) => {
+          progressBar.style.width = progress + "%";
+          percentageText.innerText = progress + "%";
+          clearInterval(interval);
+        });
+
+        const interval = setInterval(updateProgress, 1000); // Update every 0.5 seconds
+      });
+    </script>
+  </body>
+</html>

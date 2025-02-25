@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "da1KbcgNWjV2vmn0YFEUUJrlfnh3737PfBwOH/QczTk=",
+  "Source": "BiometricFaceApi",
+  "BasePath": "_content/BiometricFaceApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE83A8C4-A618-4070-AD0E-7EA87743E3B6}|BiometricFaceApi.csproj|c:\\users\\bc4g9992\\documents\\fct_auto_test\\backend\\services\\linkstationandlineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE83A8C4-A618-4070-AD0E-7EA87743E3B6}|BiometricFaceApi.csproj|solutionrelative:services\\linkstationandlineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LinkStationAndLineService.cs",
+              "DocumentMoniker": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\Services\\LinkStationAndLineService.cs",
+              "RelativeDocumentMoniker": "Services\\LinkStationAndLineService.cs",
+              "ToolTip": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\Services\\LinkStationAndLineService.cs",
+              "RelativeToolTip": "Services\\LinkStationAndLineService.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAwwHoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T13:01:20.265Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

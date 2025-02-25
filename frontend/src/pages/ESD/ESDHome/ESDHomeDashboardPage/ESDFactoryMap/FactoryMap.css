@@ -1,0 +1,348 @@
+.container {
+  background-color: #f0f2f5;
+  position: relative;
+}
+
+h1 {
+  margin-top: 14px !important;
+  font-size: 24px !important;
+}
+
+.container-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f2f5;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.line-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1px !important;
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-button-container {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 4px;
+  height: 32px;
+  border-radius: 0;
+  border: 2px solid #389e0d !important;
+  color: #389e0d !important;
+  transition: background-color 0.3s ease; /* Adiciona transição suave */
+  width: 129px;
+}
+
+.remove-button-container{
+  display: flex;
+  margin-top: 10px;
+  margin-right: 4px;
+  height: 32px;
+  border-radius: 0;
+  border: 2px solid red !important;
+  color: red !important;
+  transition: background-color 0.3s ease;
+  width: 129px;
+}
+
+.enable-button-container{
+  display: flex;
+  margin-top: 10px;
+  margin-right: 4px;
+  height: 32px;
+  border-radius: 0;
+  border: 2px solid red !important;
+  color: #389e0d !important;
+  transition: background-color 0.3s ease;
+  width: 129px;
+}
+.notification-icon-fixed {
+  position: fixed;
+  bottom: 78%;
+  right: 13%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.ant-snackbar {
+  font-family: "Roboto", sans-serif;
+  color: #595959;
+  border-radius: 4px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+}
+
+.ant-snackbar-success {
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  position: relative;
+}
+
+.ant-snackbar-success::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #4caf50;
+  border-radius: 4px 0 0 4px;
+}
+
+.ant-snackbar-error {
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+}
+
+.ant-alert {
+  background-color: inherit;
+  color: inherit;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.snackbar-position {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.white-background-button {
+  background-color: white !important;
+  border: none !important;
+  color: #bfbfbf;
+}
+
+.white-background-button:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.no-border {
+  box-shadow: none !important;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-btn.ant-btn-round.ant-btn-sm {
+  border-radius: 24px;
+  padding-inline-start: 15px;
+  padding-inline-end: 15px;
+  width: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {  
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body .card, 
+.body .card-header, 
+.body .card-body {
+  border: none;
+  box-shadow: none;
+  background-color: white;
+  margin-bottom: 25px;
+}
+
+.card-body {
+  border: 2px solid red;
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.no-lines-message{
+  align-items: center;
+  padding: 28%;
+}
+
+input[type=radio]#Red {
+  accent-color: #4caf50;
+}
+
+.green-checkbox .ant-checkbox-inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; 
+  border: 2px solid #389e0d !important; 
+  transition: all 0.3s;
+}
+
+.green-checkbox .ant-checkbox-inner::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%; 
+  transform: translate(-50%, -50%) scale(0); 
+  transition: all 0.3s;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #389e0d !important
+} 
+
+.custom-modal .ant-modal-content {
+  width: 299px !important;
+  height: 161px !important;
+  padding: 24px 38px;
+  border-radius: 2px 0px 0px 0px;
+  top: 162px;
+  right: -111px;
+  opacity: 1;
+}
+
+.button-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.custom-button {
+  text-transform: none !important;
+  height: 25px;
+  width: 46%;
+  border-radius: 0 !important;
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon-delete {
+  margin-right: 108px !important;
+  padding-bottom: 13px;
+  color: #F59E0B;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.custom-font-delete {
+  font-family: 'Selawik', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.custom-font-edit {
+  height: 26px;
+  border-radius: 0;
+  background-color: #389e0d !important;
+  width: 100px;
+}
+
+.custom-cancel-button {
+  height: 26px;
+  border-radius: 0;
+  width: 100px;
+}
+
+.modal-form {
+  margin-bottom: 16px;
+}
+
+.modal-form .ant-input-suffix {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.modal-edit-button,
+.modal-close-button {
+  width: 105px;
+  height: 22px;
+  margin-right: 20px;
+}
+
+.textfield-as-label {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  font-size: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+ 
+.textfield-as-label .MuiInputBase-input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.css-cij06z-MuiTypography-root {
+  margin-left: 33px !important;
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.data-view {
+  margin-top: 16px;
+}

@@ -1,0 +1,25 @@
+/* Estilos do Card */
+.card-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .card-container {
+    max-height: 500px;
+  }
+  
+  /* Estilos de carregamento (Spin) */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Estilos do Alert */
+  .error-alert {
+    margin-bottom: 16px;
+  }
+  

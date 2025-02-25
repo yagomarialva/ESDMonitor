@@ -1,0 +1,46 @@
+.modal-title-container-add {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaçamento entre ícone e texto */
+}
+
+.modal-container {
+  max-width: 600px;
+  padding: 0.1px;
+  background-color: none !important;
+}
+
+.icon-add-monitor {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #389E0D; /* Cor verde */
+}
+
+.submit-button-add-monitor{
+  height: 22px;
+  width: 93px;
+  border-radius: 0px;
+  background-color: #389E0D; /* Cor verde */
+}
+
+.submit-button-cancel-monitor{
+  height: 22px;
+  width: 93px;
+  border-radius: 0px;
+  color: #389E0D; /* Cor verde */
+}
+
+.form-container {
+  width: 100%;
+}
+
+.button-container-monitor-to-add {
+  margin-top: 24px; /* mt: 3 (em px, 3 * 8 = 24px) */
+  display: flex;
+  justify-content: center;
+  gap: 18px; /* gap: 12 (em px, 12 * 8 = 96px) */
+}
+
+.button-container button {
+  margin-left: 10px; /* Espaçamento entre os botões */
+}

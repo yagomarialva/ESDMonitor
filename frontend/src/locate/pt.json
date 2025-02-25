@@ -1,0 +1,308 @@
+{
+  "translation": {
+    "headerTitle": "Meu Titulo do Cabecalho do {{appName}}",
+    "ESD_TEST": {
+      "TABLE_HEADER": "Estações ESD",
+      "ADD_STATION": "Adicionar JIG",
+      "LOADING": "Carregando Lista de Jigs",
+      "TABLE": {
+        "USER_ID": "Número de Série",
+        "NAME": "Descrição",
+        "ACTIONS": "Ações",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM-TEXT": "Deseja excluir o Jig?",
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "DELETE_STATION": "Excluir Jig"
+      },
+      "DIALOG": {
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "CREATE_STATION": "Adicionar Jig",
+        "EDIT_STATION": "Editar Jig"
+      },
+      "TOAST": {
+        "CREATE_SUCCESS": "Jig criado com sucesso",
+        "TOAST_ERROR": "Operação não pode ser concluída",
+        "DELETE_SUCCESS": "Jig Excluído com sucesso",
+        "UPDATE_SUCCESS": "Jig atualizado com sucesso"
+      }
+    },
+    "ESD_OPERATOR": {
+      "FACIAL_RECOGNITION":"Reconhecimento Facial",
+      "TABLE_HEADER": "Operadores ESD",
+      "ADD_OPERATOR": "Adicionar Operador",
+      "NAME_REQUIRED":"Insira um nome válido",
+      "BADGE_REQUIRED":"Insira um número de matrícula válido",
+      "EDIT_OPERATOR": "Editar Operador",
+      "INFO_OPERATOR": "Informações do Operador",
+      "DELETE_OPERATOR": "Deletar Operador",
+      "TAKE_PHOTO":"Adicionar foto",
+      "CANCEL":"Cancelar",
+      "CAPTURE":"Capturar Foto",
+      "RETAKE_PHOTO":"Tirar outra foto",
+      "CREATE": "Adicionar",
+      "PHOTO": "Foto do operador",
+      "UPDATE":"Atualizar Operador",
+      "TABLE": {
+        "USER_ID": "Matrícula",
+        "NAME": "Operador(a)",
+        "ACTIONS": "Ações",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "ROLE": "Cargo",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável",
+        "PHOTO": "Foto"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM_TEXT": "Deseja excluir o Operador(a)? ",
+        "CLOSE": "Não",
+        "SAVE": "Sim",
+        "DELETE_OPERATOR": "Excluir Operador(a)"
+      },
+      "DIALOG": {
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "CREATE_OPERATOR": "Adicionar Operador(a)",
+        "EDIT_OPERATOR": "Editar Operador(a)"
+      },
+      "TOAST": {
+        "CREATE_SUCCESS": "Operador(a) criado(a) com sucesso",
+        "TOAST_ERROR": "Operação não pode ser concluída",
+        "DELETE_SUCCESS": "Operador(a) Excluído(a) com sucesso",
+        "UPDATE_SUCCESS": "Operador(a) atualizado(a) com sucesso"
+      }
+    },
+    "ESD_MONITOR": {
+      "TABLE_HEADER": "Monitores ESD",
+      "ADD_MONITOR": "Adicionar Monitor",
+      "EDIT_MONITOR": "Editar Monitor",
+      "INFO_MONITOR": "Informações do Monitor",
+      "DELETE_MONITOR": "Deletar Monitor",
+      "STATUS_MONITOR": "Status",
+      "TABLE": {
+        "SERIAL_NUMBER": "Número de Série",
+        "DESCRIPTION": "Descrição",
+        "NAME": "Monitor",
+        "ACTIONS": "Ações",
+        "STATUS": "Status",
+        "STATUS_JIG": "Status do JIG",
+        "STATUS_OPERATOR": "Status do Operador",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "STATION": "Estação",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM-TEXT": "Deseja excluir o Monitor",
+        "CLOSE": "Fechar",
+        "SAVE": "Excluir",
+        "DELETE_MONITOR": "Excluir Monitor"
+      },
+      "DIALOG": {
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "CREATE_MONITOR": "Adicionar Monitor",
+        "EDIT_MONITOR": "Editar Monitor"
+      },
+      "TOAST": {
+        "CREATE_SUCCESS": "Monitor criado com sucesso",
+        "TOAST_ERROR": "Operação não pode ser concluída",
+        "DELETE_SUCCESS": "Monitor Excluído com sucesso",
+        "UPDATE_SUCCESS": "Monitor atualizado com sucesso"
+      }
+    },
+    "LINE": {
+      "TABLE_HEADER": "Linha de produção",
+      "SEARCH_INPUT": "Título",
+      "ADD_LINE": "Adicionar",
+      "EDIT_LINE": "Editar Linha",
+      "INFO_LINE": "Informações do Linha",
+      "DELETE_LINE": "Deletar Linha",
+      "STATUS_LINE": "Status",
+      "TABLE": {
+        "USER_ID": "Número de Série",
+        "NAME": "Linha",
+        "ACTIONS": "Ações",
+        "STATUS": "Status",
+        "STATUS_JIG": "Status da Linha",
+        "STATUS_OPERATOR": "Status da Linha",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "STATION": "Estação",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM-TEXT": "Deseja excluir a Linha?",
+        "CLOSE": "Não",
+        "SAVE": "Sim",
+        "DELETE_LINE": "Excluir Linha"
+      },
+      "DIALOG": {
+        "CLOSE": "Voltar",
+        "SAVE": "Salvar",
+        "CREATE_LINE": "Adicionar Linha",
+        "EDIT_LINE": "Editar"
+      },
+      "TOAST": {
+        "CREATE_SUCCESS": "Linha criada com sucesso.",
+        "TOAST_ERROR": "Operação não pode ser concluída.",
+        "DELETE_SUCCESS": "Linha Excluída com sucesso.",
+        "UPDATE_SUCCESS": "Linha atualizada com sucesso."
+      }
+    },
+    "STATION": {
+      "TABLE_HEADER": "Controle - Estação",
+      "ADD_STATION": "Nova Estação",
+      "EDIT_STATION": "Editar Estação",
+      "INFO_STATION": "Informações da Estação",
+      "DELETE_STATION": "Deletar Estação",
+      "STATUS_STATION": "Status",
+      "TABLE": {
+        "USER_ID": "Número de Série",
+        "NAME": "Estação",
+        "ACTIONS": "Ações",
+        "STATUS": "Status",
+        "STATUS_JIG": "Status da Estação",
+        "STATUS_OPERATOR": "Status da Estação",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "STATION": "Estação",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM-TEXT": "Deseja excluir a Estação?",
+        "CLOSE": "Fechar",
+        "SAVE": "Excluir",
+        "DELETE_STATION": "Excluir Estação"
+      },
+      "DIALOG": {
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "CREATE_STATION": "Adicionar Estação",
+        "EDIT_STATION": "Editar Estação"
+      },
+      "TOAST": {
+        "CREATE_SUCCESS": "Estação criada com sucesso",
+        "TOAST_ERROR": "Operação não pode ser concluída",
+        "DELETE_SUCCESS": "Estação Excluída com sucesso",
+        "UPDATE_SUCCESS": "Estação atualizada com sucesso"
+      }
+    },
+    "LINK_STATION_LINE": {
+      "TABLE_HEADER": "Ligação",
+      "ADD_LINK_STATION_LINE": "Adicionar Ligação",
+      "EDIT_LINK_STATION_LINE": "Editar Ligação",
+      "INFO_LINK_STATION_LINE": "Informações do Ligação",
+      "DELETE_LINK_STATION_LINE": "Deletar Ligação",
+      "STATUS_LINK_STATION_LINE": "Status",
+      "TABLE": {
+        "USER_ID": "Número de Série",
+        "NAME": "Ligação",
+        "ACTIONS": "Ações",
+        "STATUS": "Status",
+        "STATUS_JIG": "Status da Ligação",
+        "STATUS_OPERATOR": "Status da Ligação",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "LINK_STATION_LINE": "Ligação",
+        "LINE": "Linha",
+        "ORDER": "Ordem",
+        "STATION": "Estação",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM-TEXT": "Deseja excluir a Ligação?",
+        "CLOSE": "Fechar",
+        "SAVE": "Excluir",
+        "DELETE_LINK_STATION_LINE": "Excluir Ligação",
+        "EMPTY": "Não há itens a serem listados"
+      },
+      "DIALOG": {
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "CREATE_LINK_STATION_LINE": "Adicionar Ligação",
+        "EDIT_LINK_STATION_LINE": "Editar Ligação"
+      },
+      "TOAST": {
+        "CREATE_SUCCESS": "Ligação criada com sucesso",
+        "TOAST_ERROR": "Operação não pode ser concluída",
+        "DELETE_SUCCESS": "Ligação Excluída com sucesso",
+        "UPDATE_SUCCESS": "Ligação atualizada com sucesso"
+      }
+    },
+    "MAP_FACTORY": {
+      "TABLE_HEADER": "Ligação",
+      "ADD_LINK_STATION_LINE": "Adicionar Ligação",
+      "EDIT_LINK_STATION_LINE": "Editar Ligação",
+      "INFO_LINK_STATION_LINE": "Informações do Ligação",
+      "DELETE_LINK_STATION_LINE": "Deletar Ligação",
+      "STATUS_LINK_STATION_LINE": "Status",
+      "TABLE": {
+        "USER_ID": "Número de Série",
+        "NAME": "Ligação",
+        "ACTIONS": "Ações",
+        "STATUS": "Status",
+        "STATUS_JIG": "Status da Ligação",
+        "STATUS_OPERATOR": "Status da Ligação",
+        "COLUMNS": "Filtrar Colunas",
+        "DENSITY": "Ajustar Exibição",
+        "SEARCH": "Pesquisar",
+        "LINK_STATION_LINE": "Ligação",
+        "LINE": "Linha",
+        "ORDER": "Ordem",
+        "STATION": "Estação",
+        "COMPACT": "Compacto",
+        "STANDARD": "Padrão",
+        "CONFORTABLE": "Confortável"
+      },
+      "CONFIRM_DIALOG": {
+        "CONFIRM-TEXT": "Deseja excluir a Ligação?",
+        "CLOSE": "Fechar",
+        "SAVE": "Excluir",
+        "DELETE_LINK_STATION_LINE": "Excluir Ligação",
+        "EMPTY": "Não há itens a serem listados"
+      },
+      "DIALOG": {
+        "CLOSE": "Fechar",
+        "SAVE": "Salvar",
+        "CREATE_LINK_STATION_LINE": "Adicionar Ligação",
+        "EDIT_LINK_STATION_LINE": "Editar Ligação"
+      },
+      "TOAST": {
+        "ERROR":"Erro ao processar a operação.",
+        "CREATE_SUCCESS": "Monitor associado com sucesso!",
+        "EXPIRED_SESSION": "Sessão Expirada",
+        "TOAST_ERROR": "Operação não pode ser concluída",
+        "DELETE_SUCCESS": "Monitor associado Excluído com sucesso",
+        "UPDATE_SUCCESS": "Monitor associado atualizado com sucesso"
+      }
+    },
+    "FCT_Home_Page": {
+      "Header": "Página Inicial",
+      "Label": "FCT para automação dos testes"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@BiometricFaceApi_HostAddress = http://localhost:5051
+
+GET {{BiometricFaceApi_HostAddress}}/Biometric/
+Accept: application/json
+
+###

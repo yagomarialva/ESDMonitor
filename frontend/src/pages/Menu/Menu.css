@@ -1,0 +1,133 @@
+.list-items-buttons.selected {
+  background-color: #aec0af;
+  color: #333;
+}
+
+
+.drawer-sublist .selected {
+  background-color: #aec0af;
+  color: #333;
+}
+
+.css-cveggr-MuiListItemIcon-root {
+  min-width: 24px !important;
+  color: rgba(0, 0, 0, 0.54);
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
+.logo-header {
+  width: 200px;
+  margin-top: 13px;
+  margin-left: -15px;
+}
+
+.itens-header {
+  margin-right: -10px;
+  color: '#FFFFFF';
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-card .ant-card-body {
+  padding: 0px !important;
+  border-radius: 0 0 8px 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  height: 2em !important;
+}
+
+.css-1uo2c35-MuiListItem-root {
+  width: 92% !important;
+}
+
+.list-items-buttons {
+  min-height: 48%;
+  justify-content: center;
+  padding-right: 3.5rem;
+  padding-left: 2.5rem;
+}
+
+.list-items-buttons-icons {
+  min-width: 0;
+  margin-right: 1rem;
+  justify-content: initial;
+}
+
+.drawer-paper {
+  box-sizing: border-box;
+  margin-top: 64px;
+  margin-left: 10px;
+  margin-right: 1px;
+  transition: width 0.3s;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 11%;
+  margin-top: 4%;
+  padding: 5px;
+}
+
+.collapse-button-container {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  z-index: 10;
+}
+
+.collapse-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-layout .ant-layout-sider-children {
+  height: 100%;
+  margin-top: 46.9px ;
+  padding-top: 0.1px;
+}
+
+:where(.css-qnu6hi).ant-layout .ant-layout-sider-children {
+  height: 100%;
+  margin-top: -0.1px;
+  padding-top: 36.1px !important;
+}
+
+.drawer-card {
+  max-width: 100%;
+  max-height: 100%;
+  width: 86% !important;
+  background-color: var(--background-paper, #fff);
+}
+
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+:where(.css-dev-only-do-not-override-nqoqt9).ant-layout-sider .ant-layout-sider-trigger {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 100% !important;
+  }
+}
+.ant-layout-sider-children{
+  margin-top: 48.9px !important;
+}
+
+.ant-layout-sider-trigger{
+  display: none !important;
+}
+
+.main-card {
+  min-height: 800px !important;
+}
