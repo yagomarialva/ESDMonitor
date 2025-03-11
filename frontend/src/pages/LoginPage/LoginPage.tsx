@@ -101,6 +101,7 @@ const LoginPage: React.FC = () => {
         <img src={Logo} alt="" width="200px" style={{ marginTop: "20px" }} />
 
         <TextField
+          id="Nome"
           label="Nome"
           sx={{ my: 3 }}
           fullWidth
@@ -110,6 +111,7 @@ const LoginPage: React.FC = () => {
           value={username}
         />
         <TextField
+          id="Senha"
           label="Senha"
           type="password"
           sx={{ mb: 3 }}

@@ -105,7 +105,7 @@ const ReusableModal: React.FC<ReusableModalProps> = ({
 
   const [operatorLogData, setOperatorLogData] = useState([]); // Renomeado para evitar conflitos
   const [jigLogData, setJigLogData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -218,38 +218,43 @@ const ReusableModal: React.FC<ReusableModalProps> = ({
       content: "Tem certeza de que deseja excluir este monitor?",
       className: "custom-modal",
       onOk: async () => {
-        setIsLoading(true) // Start loading
+        setIsLoading(true); // Start loading
         try {
-          const monitorToDelete = await getMonitor(monitor.monitorsESD.serialNumberEsp)
-          console.log("monitor.monitorsESD.id", monitorToDelete)
+          const monitorToDelete = await getMonitor(
+            monitor.monitorsESD.serialNumberEsp
+          );
+          console.log("monitor.monitorsESD.id", monitorToDelete);
           if (!monitorToDelete.id) {
-            throw new Error("Monitor ID is missing")
+            throw new Error("Monitor ID is missing");
           }
-          await deleteMonitor(monitorToDelete.id)
-          setIsLoading(false) // Stop loading
-          onUpdate()
-          onDelete()
-          onClose()
-          message.success("Monitor excluído com sucesso!")
+          await deleteMonitor(monitorToDelete.id);
+          setIsLoading(false); // Stop loading
+          onUpdate();
+          onDelete();
+          onClose();
+          message.success("Monitor excluído com sucesso!");
         } catch (error: any) {
-          console.error("Error deleting monitor:", error)
+          console.error("Error deleting monitor:", error);
           if (error.response && error.response.status === 400) {
             // If we get a 400 error, assume the deletion was successful but there was a communication issue
             // message.warning(
             //   "O monitor foi excluído, mas houve um problema de comunicação. Por favor, atualize a página.",
             // )
             setTimeout(() => {
-              setIsLoading(false) // Stop loading
-              onUpdate()
-              onDelete()
-              onClose()
-            }, 2000) // 2 second delay
+              setIsLoading(false); // Stop loading
+              onUpdate();
+              onDelete();
+              onClose();
+            }, 2000); // 2 second delay
           } else {
-            message.error("Erro ao excluir o monitor: " + (error.message || "Erro desconhecido"))
+            message.error(
+              "Erro ao excluir o monitor: " +
+                (error.message || "Erro desconhecido")
+            );
             if (error.response && error.response.status === 401) {
-              showMessage("Sessão Expirada.", "error")
-              localStorage.removeItem("token")
-              navigate("/")
+              showMessage("Sessão Expirada.", "error");
+              localStorage.removeItem("token");
+              navigate("/");
             }
           }
         }
@@ -260,8 +265,8 @@ const ReusableModal: React.FC<ReusableModalProps> = ({
       cancelButtonProps: {
         className: "custom-cancel-button",
       },
-    })
-  }
+    });
+  };
   //table
   const monitorColumns: ColumnsType<DataType> = [
     {
@@ -378,11 +383,16 @@ const ReusableModal: React.FC<ReusableModalProps> = ({
             {activeKey === "1" && (
               <div className="title-icons">
                 <Tooltip title="Editar">
-                  <EditOutlined className="icon-action" onClick={handleEdit} />
+                  <EditOutlined
+                    id="edit-icon"
+                    className="icon-action"
+                    onClick={handleEdit}
+                  />
                 </Tooltip>
                 {!isEditing && (
                   <Tooltip title="Excluir">
                     <DeleteOutlined
+                      id="delete-icon"
                       className="icon-action"
                       onClick={handleConfirmDelete}
                     />

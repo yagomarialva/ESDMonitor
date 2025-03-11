@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\BiometricFaceApi.csproj": {}
+    "C:\\Users\\BC4G9992\\Documents\\Compal\\fct_auto_test\\backend\\BiometricFaceApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\BiometricFaceApi.csproj": {
+    "C:\\Users\\BC4G9992\\Documents\\Compal\\fct_auto_test\\backend\\BiometricFaceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\BiometricFaceApi.csproj",
+        "projectUniqueName": "C:\\Users\\BC4G9992\\Documents\\Compal\\fct_auto_test\\backend\\BiometricFaceApi.csproj",
         "projectName": "BiometricFaceApi",
-        "projectPath": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\BiometricFaceApi.csproj",
+        "projectPath": "C:\\Users\\BC4G9992\\Documents\\Compal\\fct_auto_test\\backend\\BiometricFaceApi.csproj",
         "packagesPath": "C:\\Users\\BC4G9992\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\obj\\",
+        "outputPath": "C:\\Users\\BC4G9992\\Documents\\Compal\\fct_auto_test\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

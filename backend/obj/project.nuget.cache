@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tr+nPiufL1I=",
+  "dgSpecHash": "9LyOn9htlro=",
   "success": true,
-  "projectFilePath": "C:\\Users\\BC4G9992\\Documents\\fct_auto_test\\backend\\BiometricFaceApi.csproj",
+  "projectFilePath": "C:\\Users\\BC4G9992\\Documents\\Compal\\fct_auto_test\\backend\\BiometricFaceApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BC4G9992\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\BC4G9992\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",

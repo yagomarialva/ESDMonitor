@@ -212,7 +212,7 @@ const Line: React.FC<ESDStationProps> = ({ lineData, onUpdate }) => {
 
     try {
       const selectedInfo = handleStationSelect(selectedStation);
-      console.log('selectedStation', selectedStation.monitorsEsd)
+      console.log("selectedStation", selectedStation.monitorsEsd);
       await deleteLink(selectedInfo.linkId);
 
       await deleteStation(selectedInfo.station.id);
@@ -228,7 +228,6 @@ const Line: React.FC<ESDStationProps> = ({ lineData, onUpdate }) => {
         showSnackbar("Estação excluída com sucesso!", "success");
       }
       // Mostra o Snackbar de sucesso
-      
     } catch (error: any) {
       console.error("Erro ao excluir a estação:", error);
 
@@ -250,6 +249,7 @@ const Line: React.FC<ESDStationProps> = ({ lineData, onUpdate }) => {
             {isEditing && (
               <>
                 <Button
+                  id="delete-button"
                   type="primary"
                   shape="round"
                   icon={<RemoveCircleOutlineOutlinedIcon />}
@@ -259,6 +259,7 @@ const Line: React.FC<ESDStationProps> = ({ lineData, onUpdate }) => {
                   className="white-background-button no-border"
                 />
                 <Button
+                  id="add-button"
                   type="primary"
                   shape="round"
                   icon={<AddCircleOutlineRoundedIcon />}
@@ -282,37 +283,42 @@ const Line: React.FC<ESDStationProps> = ({ lineData, onUpdate }) => {
         <div className="line-container">
           <div className="line-content">
             <div className="esd-line-container">
-            <div className="stations-container">
-              {lineData.stations.map((stationEntry) => (
-                <div key={stationEntry.station.id}>
-                  {isEditing && ( // Renderiza os botões de rádio apenas no modo de edição
-                    <div className="radio-button">
-                      <Tooltip
-                        title={
-                          stationEntry.monitorsEsd.length > 0
-                            ? "Não é possível excluir uma estação com monitores inseridos a ela."
-                            : ""
+              <div className="stations-container">
+                {lineData.stations.map((stationEntry) => (
+                  <div key={stationEntry.station.id}>
+                    {isEditing && ( // Renderiza os botões de rádio apenas no modo de edição
+                      <div className="radio-button">
+                        <Tooltip
+                          title={
+                            stationEntry.monitorsEsd.length > 0
+                              ? "Não é possível excluir uma estação com monitores inseridos a ela."
+                              : ""
                           }
-                      >
+                        >
                           <input
                             type="radio"
                             name="selectedStation"
-                            id={`station-${stationEntry.station.id}`} // ID único para cada estação
+                            id="radio-button-station"// ID único para cada estação
                             value={stationEntry.station.id}
                             onChange={() => handleStationSelect(stationEntry)}
-                            checked={ selectedStationId === stationEntry.station.id}
+                            checked={
+                              selectedStationId === stationEntry.station.id
+                            }
                             title={`Select station ${stationEntry.station.name}`}
                             disabled={stationEntry.monitorsEsd.length > 0}
                           />
-                      </Tooltip>
+                        </Tooltip>
+                      </div>
+                    )}
+                    <div className="stations-wrapper">
+                      <Station
+                        stationEntry={stationEntry}
+                        onUpdate={onUpdate}
+                      />
                     </div>
-                  )}
-                  <div className="stations-wrapper">
-                  <Station stationEntry={stationEntry} onUpdate={onUpdate} />
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
             </div>
           </div>
 

@@ -375,6 +375,7 @@ const Station: React.FC<StationProps> = ({ stationEntry, onUpdate }) => {
               >
                 {group.map((cell, index) => (
                   <div
+                    id="cell"
                     key={index}
                     className={`icon-container ${
                       [0, 4].includes(groupIndex * 4 + index)

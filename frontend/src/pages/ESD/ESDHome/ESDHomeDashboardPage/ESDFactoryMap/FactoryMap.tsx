@@ -437,6 +437,7 @@ const FactoryMap: React.FC<FactoryMapProps> = ({ lines, onUpdate }) => {
                           }
                         >
                           <Checkbox
+                            id="checkbox-factory-map"
                             checked={selectedLineId === line.line.id}
                             onChange={() => handleLineChange(line)}
                             disabled={line.stations.length > 1} // Desabilita se houver mais de uma estação

@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  cypress:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - CYPRESS_baseUrl=https://example.cypress.io

@@ -76,6 +76,7 @@ const MonitorForm: React.FC<MonitorFormProps> = ({
       render: () => (
         <Tooltip title={monitor.serialNumberEsp}>
           <Input
+            id="serialNumberEsp"
             name="serialNumberEsp"
             value={monitor.serialNumberEsp}
             onChange={handleChange}
@@ -91,6 +92,7 @@ const MonitorForm: React.FC<MonitorFormProps> = ({
       render: () => (
         <Tooltip title={monitor.description}>
           <Input
+            id="description"
             name="description"
             value={monitor.description}
             onChange={handleChange}
@@ -126,12 +128,14 @@ const MonitorForm: React.FC<MonitorFormProps> = ({
       />
       <div className="button-container-monitor-to-add">
         <Button
+          id="submit-button-cancel-monitor"
           onClick={handleCloseModal}
           className="submit-button-cancel-monitor"
         >
           {t("ESD_TEST.DIALOG.CLOSE", { appName: "App for Translations" })}
         </Button>
         <Button
+          id="submit-button-add-monitor"
           type="primary"
           onClick={handleSubmit}
           className="submit-button-add-monitor"

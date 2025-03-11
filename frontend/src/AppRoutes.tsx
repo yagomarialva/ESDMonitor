@@ -28,9 +28,9 @@ const AppRoutes: React.FC = () => {
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <DashboardESD />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route path="*" element={<NotFoundPage />} />
